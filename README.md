@@ -43,7 +43,7 @@ docker run -d -p 80:80 -p 443:443 --name ft_server ft_server
 
 To start the container with your configuration :
 ```bash
-docker run -d --name ft_server
+docker run -d --name ft_server      \
     -p 80:80 -p 443:443             \
     -e AUTO_INDEX="OFF"             \
     -e DEV_CERT="YES"               \
