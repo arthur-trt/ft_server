@@ -3,7 +3,7 @@ FROM debian:buster
 LABEL maintainer="atrouill@student.42.fr"
 
 RUN apt-get update && \
-    apt-get install -y nginx php-fpm php-mysql php-mbstring mariadb-server openssl curl wget
+    apt-get install -y nginx php-fpm php-mysql php-mbstring mariadb-server openssl curl wget vim
 
 COPY ./srcs/ ./root/
 
@@ -15,7 +15,7 @@ RUN curl -SL https://github.com/FiloSottile/mkcert/releases/download/v1.4.1/mkce
     mkcert -install && \
     mkcert -key-file key.pem -cert-file cert.pem 127.0.0.1 localhost ::1
 
-# Configure Nginx
+# Configure NGINX
 RUN mv /var/www/html/* /var/www && \
     rm -rf /var/www/html && \
     rm -rf /etc/nginx/sites-enabled/* && \
