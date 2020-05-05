@@ -50,6 +50,6 @@ docker run -d --name ft_server      \
     -e SQL_USERNAME="marvin"        \
     -e SQL_PASSWORD="super"         \
     -e WP_USERNAME="norminet"       \
-    -e WP_PASSWORD="bonr2code"      \
+    -e WP_PASSWORD="born2code"      \
     ft_server
 ```
