@@ -20,7 +20,7 @@ docker build -t ft_server .
 ##### Environment variables
 | Environment variables  | Default      | Values            | Effects                                                                                                                      |
 |:----------------------:|:------------:|:-----------------:|------------------------------------------------------------------------------------------------------------------------------|
-| `AUTO_INDEX`           | `YES`        | `YES/NO/EMPTY`    | If `NO` change line in nginx conf for disable `autoindex`.                                                                   |
+| `AUTO_INDEX`           | `ON`        | `ON/OFF/EMPTY`    | If `NO` change line in nginx conf for disable `autoindex`.                                                                   |
 | `DEV_CERT`             | `NO`         | `YES/NO/EMPTY`    | If on `YES` will use `cert_dev.pem` and `key_dev.pem`from srcs folder. Otherwise it will generate certificates and use them. |
 | `SQL_USERNAME`         | `uwordpress` | Whatever you want | Will change the SQL username in MySQL ans WP conf                                                                            |
 | `SQL_PASSWORD`         | `password`   | Whatever you want | Will change the SQL password in MySQL ans WP conf                                                                            |
@@ -50,6 +50,6 @@ docker run -d --name ft_server      \
     -e SQL_USERNAME="marvin"        \
     -e SQL_PASSWORD="super"         \
     -e WP_USERNAME="norminet"       \
-    -e WP_PASSWORD="bonr2code"      \
+    -e WP_PASSWORD="born2code"      \
     ft_server
 ```
