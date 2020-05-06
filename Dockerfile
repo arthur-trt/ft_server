@@ -6,13 +6,15 @@
 #    By: atrouill <atrouill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/05 11:34:48 by atrouill          #+#    #+#              #
-#    Updated: 2020/05/05 19:38:06 by atrouill         ###   ########.fr        #
+#    Updated: 2020/05/06 10:14:51 by atrouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FROM debian:buster
 
 LABEL maintainer="atrouill@student.42.fr"
+
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
 RUN apt-get update && \
 	apt-get install -y nginx php-fpm php-mysql php-mbstring php-curl php-dom php-imagick php-zip php-gd mariadb-server openssl curl wget vim ccze
@@ -53,7 +55,7 @@ RUN wget -q https://wordpress.org/latest.tar.gz && \
 	mv wp-config.php /var/www/wordpress
 
 # Configure Web directory
-RUN cp -r test/ /var/www/test/ && \
+RUN mv -r test/ /var/www/test/ && \
 	chown -R www-data:www-data /var/www/* && \
 	chmod -R 755 /var/www/*
 
