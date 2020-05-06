@@ -4,7 +4,7 @@ This is the ft_server project from school 42. The goal of this project is to use
 
 ## Usage
 
-To compile it, just run : 
+To compile it, just run :
 ``` bash
 docker build -t ft_server .
 ```
@@ -20,7 +20,7 @@ docker build -t ft_server .
 ##### Environment variables
 | Environment variables  | Default      | Values            | Effects                                                                                                                      |
 |:----------------------:|:------------:|:-----------------:|------------------------------------------------------------------------------------------------------------------------------|
-| `AUTO_INDEX`           | `ON`        | `ON/OFF/EMPTY`    | If `NO` change line in nginx conf for disable `autoindex`.                                                                   |
+| `AUTO_INDEX`           | `ON`         | `ON/OFF/EMPTY`    | If `NO` change line in nginx conf for disable `autoindex`.                                                                   |
 | `DEV_CERT`             | `NO`         | `YES/NO/EMPTY`    | If on `YES` will use `cert_dev.pem` and `key_dev.pem`from srcs folder. Otherwise it will generate certificates and use them. |
 | `SQL_USERNAME`         | `uwordpress` | Whatever you want | Will change the SQL username in MySQL ans WP conf                                                                            |
 | `SQL_PASSWORD`         | `password`   | Whatever you want | Will change the SQL password in MySQL ans WP conf                                                                            |
