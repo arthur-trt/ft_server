@@ -12,7 +12,7 @@ docker build -t ft_server .
 ##### File details
 | File              | Usage                                                                                                          |
 |:-----------------:|----------------------------------------------------------------------------------------------------------------|
-| `dbwordpress.sql` | WordPress Database                                                                                             |
+| `dbwordpress.sql` | WordPress Database.                                                                                            |
 | `launch.sh`       | Container entry point to handle environment variables, launch different services and keep the container alive. |
 | `localhost.conf`  | Configuration file for NGINX.                                                                                  |
 | `wp-config.php`   | Configuration file for WordPress.                                                                              |
