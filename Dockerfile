@@ -6,7 +6,7 @@
 #    By: atrouill <atrouill@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/05/05 11:34:48 by atrouill          #+#    #+#              #
-#    Updated: 2020/05/06 10:14:51 by atrouill         ###   ########.fr        #
+#    Updated: 2020/06/12 12:27:03 by atrouill         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ RUN wget -q https://wordpress.org/latest.tar.gz && \
 	mv wp-config.php /var/www/wordpress
 
 # Configure Web directory
-RUN mv -r test/ /var/www/test/ && \
+RUN mv test/ /var/www/test/ && \
 	chown -R www-data:www-data /var/www/* && \
 	chmod -R 755 /var/www/*
 
